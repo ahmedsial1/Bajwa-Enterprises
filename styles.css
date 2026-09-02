@@ -1,0 +1,324 @@
+/* ==========================================================================
+   BAJWA ENTERPRISES LTD. - DESIGN SYSTEM & LUXURY B2B STYLING
+   Brand: Deep Forest Green (#071F14, #0B291B) & Metallic Gold (#D4AF37, #F3C644)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-dark: #071F14;
+  --primary-emerald: #0B291B;
+  --primary-forest: #0E3D27;
+  --primary-light: #165638;
+  
+  --gold-primary: #D4AF37;
+  --gold-light: #F3C644;
+  --gold-deep: #B38F26;
+  --gold-gradient: linear-gradient(135deg, #F3C644 0%, #D4AF37 50%, #A3791B 100%);
+  --gold-shimmer: linear-gradient(90deg, rgba(212,175,55,0.1) 0%, rgba(243,198,68,0.4) 50%, rgba(212,175,55,0.1) 100%);
+  
+  --bg-cream: #FAF8F5;
+  --bg-cream-card: #FFFFFF;
+  --bg-dark-surface: #0A2418;
+  
+  --text-dark: #111827;
+  --text-slate: #334155;
+  --text-muted: #64748B;
+  --text-light: #F8FAFC;
+  --text-gold: #E5B83B;
+  
+  --border-gold: rgba(212, 175, 55, 0.35);
+  --border-glass: rgba(255, 255, 255, 0.12);
+  --shadow-gold: 0 10px 30px -5px rgba(212, 175, 55, 0.25);
+  --shadow-card: 0 20px 40px -15px rgba(7, 31, 20, 0.08);
+  --shadow-elevated: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-slate);
+  background-color: var(--bg-cream);
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-cream);
+}
+
+.font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-serif-luxury {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+/* Luxury gold text and borders */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F5D77F 0%, #D4AF37 50%, #E2BA46 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-light {
+  color: var(--gold-light);
+}
+
+.border-gold-subtle {
+  border-color: var(--border-gold);
+}
+
+.bg-gold-gradient {
+  background: var(--gold-gradient);
+}
+
+.bg-forest-gradient {
+  background: linear-gradient(180deg, #071F14 0%, #0B291B 60%, #071F14 100%);
+}
+
+.bg-forest-radial {
+  background: radial-gradient(circle at 50% 30%, #12402B 0%, #071F14 80%);
+}
+
+/* Glassmorphism Classes */
+.glass-dark {
+  background: rgba(7, 31, 20, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+}
+
+.glass-dark-card {
+  background: rgba(11, 41, 27, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.glass-light-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.glass-nav {
+  background: rgba(7, 31, 20, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Luxury Golden Buttons & Glows */
+.btn-gold {
+  background: linear-gradient(135deg, #F3C644 0%, #D4AF37 50%, #B38F26 100%);
+  color: #071F14;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: 0.5s;
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(212, 175, 55, 0.55);
+}
+
+.btn-gold:hover::before {
+  left: 100%;
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: #F3C644;
+  border: 1.5px solid var(--gold-primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: #F3C644;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Pulse badge & animation */
+.pulse-gold {
+  box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.6);
+  animation: pulseGoldAnim 2s infinite;
+}
+
+@keyframes pulseGoldAnim {
+  0% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(212, 175, 55, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0);
+  }
+}
+
+/* Commodity Product Card Styling */
+.product-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 45px -10px rgba(7, 31, 20, 0.12), 0 0 0 1px rgba(212, 175, 55, 0.45);
+  border-color: var(--gold-primary);
+}
+
+.product-image-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.product-image-container img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-card:hover .product-image-container img {
+  transform: scale(1.08);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #071F14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0E3D27;
+  border-radius: 4px;
+  border: 2px solid #071F14;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Trade Route Map Styling */
+.map-point {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.map-point:hover {
+  transform: translate(-50%, -50%) scale(1.3);
+  z-index: 30;
+}
+
+.map-pulse-origin {
+  animation: radarWave 2.5s infinite ease-out;
+}
+
+@keyframes radarWave {
+  0% {
+    width: 14px;
+    height: 14px;
+    opacity: 0.9;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+  }
+}
+
+/* Curved Route SVG Path Stroke */
+.route-line {
+  stroke-dasharray: 8, 4;
+  animation: dashRoute 30s linear infinite;
+}
+
+@keyframes dashRoute {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* Modal Animations */
+.modal-enter {
+  animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* WhatsApp Floating Badge */
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08) translateY(-3px);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+}
+
+/* Tab active state */
+.tab-active {
+  background: #071F14 !important;
+  color: #F3C644 !important;
+  border-color: #D4AF37 !important;
+}
+
+/* Print Styling for Spec Sheets & PDF Exports */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printSpecModal, #printSpecModal * {
+    visibility: visible;
+  }
+  #printSpecModal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

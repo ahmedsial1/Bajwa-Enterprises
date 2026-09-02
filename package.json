@@ -1,0 +1,21 @@
+{
+  "name": "bajwa-enterprises-ltd",
+  "version": "1.0.0",
+  "description": "BAJWA ENTERPRISES LTD. - B2B Agricultural Commodity Export Website (Nampula & Nacala Port, Mozambique)",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 server.py"
+  },
+  "keywords": [
+    "mozambique-agricultural-products",
+    "sesame-seeds",
+    "raw-cashew-nuts",
+    "macadamia-nuts",
+    "pigeon-peas",
+    "kidney-beans",
+    "fob-nacala",
+    "cif-worldwide"
+  ],
+  "author": "BAJWA ENTERPRISES LTD.",
+  "license": "ISC"
+}

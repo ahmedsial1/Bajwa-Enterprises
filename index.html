@@ -47,7 +47,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=3.0" />
 </head>
 
 <body class="bg-[#FAF8F5] text-slate-800 antialiased selection:bg-amber-400 selection:text-emerald-950">
@@ -567,9 +567,377 @@
 
       </div>
 
-      <!-- Dynamic Product Grid (Injected by app.js) -->
+      <!-- Dynamic & Pre-Rendered Product Grid -->
       <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Injected by app.js -->
+        
+        <!-- 1. Sesame Seed -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-350 border border-slate-200">
+          <div>
+            <div class="product-image-container h-56 bg-slate-900 relative">
+              <img src="assets/products/sesame-seed.jpg" alt="Sesame Seed Mozambique Origin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="eager" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#071F14]/90 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-400/30 flex items-center gap-1.5 shadow-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                Oilseeds & Grains
+              </div>
+              <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-300 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-400/30 flex items-center gap-1">
+                <span>🌱</span> 2026 New Crop
+              </div>
+              <div class="absolute bottom-3 left-3 right-3">
+                <span class="text-[10px] text-amber-300 font-semibold tracking-wider uppercase block">Mozambique Origin • May – August</span>
+                <h3 class="text-lg font-bold text-white leading-tight drop-shadow-md">Sesame Seed</h3>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex flex-wrap gap-1.5 mb-3.5">
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>2026 New Crop</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Purity 99% Min</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Machine Cleaned</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>FOB Nacala</span>
+              </div>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">Mozambique sesame seed is valued for its natural oil content, clean appearance and versatility in international food and industrial markets.</p>
+              <div class="bg-slate-50 rounded-xl p-3 border border-slate-100 mb-4 grid grid-cols-2 gap-2 text-xs">
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Moisture</span><span class="font-bold text-slate-800">8% Max</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Purity</span><span class="font-bold text-emerald-800">99% Min</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Packing</span><span class="font-semibold text-slate-700 truncate block">50 KG PP Bags</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Port</span><span class="font-semibold text-amber-700">FOB Nacala</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex items-center gap-2">
+            <button onclick="openProductModal('sesame-seed')" class="flex-1 py-2.5 px-3 rounded-xl bg-[#071F14] hover:bg-[#0B291B] text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition border border-amber-400/20 hover:border-amber-400/50">
+              <i class="fa-regular fa-file-lines text-amber-400"></i>
+              <span>Export Specs</span>
+            </button>
+            <button onclick="prefillRfqCommodity('Sesame Seed')" class="py-2.5 px-3 rounded-xl btn-gold text-xs font-bold flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Quote</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Peanuts (Red Skin) -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-350 border border-slate-200">
+          <div>
+            <div class="product-image-container h-56 bg-slate-900 relative">
+              <img src="assets/products/peanuts-red-skin.jpg" alt="Peanuts Red Skin Mozambique Origin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="eager" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#071F14]/90 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-400/30 flex items-center gap-1.5 shadow-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                Oilseeds & Raw Nuts
+              </div>
+              <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-300 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-400/30 flex items-center gap-1">
+                <span>🌱</span> 2026 New Crop
+              </div>
+              <div class="absolute bottom-3 left-3 right-3">
+                <span class="text-[10px] text-amber-300 font-semibold tracking-wider uppercase block">Mozambique Origin • April – August</span>
+                <h3 class="text-lg font-bold text-white leading-tight drop-shadow-md">Peanuts (Red Skin)</h3>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex flex-wrap gap-1.5 mb-3.5">
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>2026 New Crop</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Red Skin Bold</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>40/50 & 50/60 Count</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>7% Moisture Max</span>
+              </div>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">Mozambique red peanut kernels are known for their attractive red skin, distinctive flavour and nutritional value.</p>
+              <div class="bg-slate-50 rounded-xl p-3 border border-slate-100 mb-4 grid grid-cols-2 gap-2 text-xs">
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Moisture</span><span class="font-bold text-slate-800">7% Max</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Grade</span><span class="font-bold text-emerald-800">Bold Runner</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Packing</span><span class="font-semibold text-slate-700 truncate block">50 KG PP Bags</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Port</span><span class="font-semibold text-amber-700">FOB Nacala</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex items-center gap-2">
+            <button onclick="openProductModal('peanuts-groundnuts')" class="flex-1 py-2.5 px-3 rounded-xl bg-[#071F14] hover:bg-[#0B291B] text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition border border-amber-400/20 hover:border-amber-400/50">
+              <i class="fa-regular fa-file-lines text-amber-400"></i>
+              <span>Export Specs</span>
+            </button>
+            <button onclick="prefillRfqCommodity('Peanuts (Red Skin)')" class="py-2.5 px-3 rounded-xl btn-gold text-xs font-bold flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Quote</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Macadamia Nuts -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-350 border border-slate-200">
+          <div>
+            <div class="product-image-container h-56 bg-slate-900 relative">
+              <img src="assets/products/macadamia-nuts.jpg" alt="Macadamia Nuts Mozambique Origin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="eager" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#071F14]/90 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-400/30 flex items-center gap-1.5 shadow-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                Premium Tree Nuts
+              </div>
+              <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-300 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-400/30 flex items-center gap-1">
+                <span>🌱</span> 2026 New Crop
+              </div>
+              <div class="absolute bottom-3 left-3 right-3">
+                <span class="text-[10px] text-amber-300 font-semibold tracking-wider uppercase block">Mozambique Origin • March – August</span>
+                <h3 class="text-lg font-bold text-white leading-tight drop-shadow-md">Macadamia Nuts</h3>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex flex-wrap gap-1.5 mb-3.5">
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>2026 New Crop</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Style 0/1/2 & Halves</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>1.5% Moisture Max</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Vacuum Cartons</span>
+              </div>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">Mozambique macadamia nuts are prized for their delicate crunch, buttery flavor and rich oil profile.</p>
+              <div class="bg-slate-50 rounded-xl p-3 border border-slate-100 mb-4 grid grid-cols-2 gap-2 text-xs">
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Moisture</span><span class="font-bold text-slate-800">1.5% Max</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Style</span><span class="font-bold text-emerald-800">Style 0 & 1</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Packing</span><span class="font-semibold text-slate-700 truncate block">10kg Cartons</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Port</span><span class="font-semibold text-amber-700">FOB Nacala</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex items-center gap-2">
+            <button onclick="openProductModal('macadamia-nuts')" class="flex-1 py-2.5 px-3 rounded-xl bg-[#071F14] hover:bg-[#0B291B] text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition border border-amber-400/20 hover:border-amber-400/50">
+              <i class="fa-regular fa-file-lines text-amber-400"></i>
+              <span>Export Specs</span>
+            </button>
+            <button onclick="prefillRfqCommodity('Macadamia Nuts')" class="py-2.5 px-3 rounded-xl btn-gold text-xs font-bold flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Quote</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Raw Cashew Nuts (RCN) -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-350 border border-slate-200">
+          <div>
+            <div class="product-image-container h-56 bg-slate-900 relative">
+              <img src="assets/products/raw-cashew-nuts.jpg" alt="Raw Cashew Nuts Mozambique Origin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="eager" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#071F14]/90 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-400/30 flex items-center gap-1.5 shadow-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                In-Shell Raw Nuts
+              </div>
+              <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-300 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-400/30 flex items-center gap-1">
+                <span>🌱</span> 2026 New Crop
+              </div>
+              <div class="absolute bottom-3 left-3 right-3">
+                <span class="text-[10px] text-amber-300 font-semibold tracking-wider uppercase block">Mozambique Origin • Oct – Feb</span>
+                <h3 class="text-lg font-bold text-white leading-tight drop-shadow-md">Raw Cashew Nuts (RCN)</h3>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex flex-wrap gap-1.5 mb-3.5">
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>2026 New Crop</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Kor 48-50 lbs</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Count 180-200</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>80 KG Jute Bags</span>
+              </div>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">Mozambique is recognized as a traditional origin for raw cashew nuts with good out-turn yield and processing quality.</p>
+              <div class="bg-slate-50 rounded-xl p-3 border border-slate-100 mb-4 grid grid-cols-2 gap-2 text-xs">
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Out-Turn</span><span class="font-bold text-emerald-800">48 - 50 lbs</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Nut Count</span><span class="font-bold text-slate-800">180-200/kg</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Packing</span><span class="font-semibold text-slate-700 truncate block">80 KG Jute Bags</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Port</span><span class="font-semibold text-amber-700">FOB Nacala</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex items-center gap-2">
+            <button onclick="openProductModal('raw-cashew-nuts')" class="flex-1 py-2.5 px-3 rounded-xl bg-[#071F14] hover:bg-[#0B291B] text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition border border-amber-400/20 hover:border-amber-400/50">
+              <i class="fa-regular fa-file-lines text-amber-400"></i>
+              <span>Export Specs</span>
+            </button>
+            <button onclick="prefillRfqCommodity('Raw Cashew Nuts (RCN)')" class="py-2.5 px-3 rounded-xl btn-gold text-xs font-bold flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Quote</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Pigeon Peas White -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-350 border border-slate-200">
+          <div>
+            <div class="product-image-container h-56 bg-slate-900 relative">
+              <img src="assets/products/pigeon-peas-white.jpg" alt="Pigeon Peas White Mozambique Origin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="eager" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#071F14]/90 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-400/30 flex items-center gap-1.5 shadow-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                Pulses & Milling Grains
+              </div>
+              <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-300 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-400/30 flex items-center gap-1">
+                <span>🌱</span> 2026 New Crop
+              </div>
+              <div class="absolute bottom-3 left-3 right-3">
+                <span class="text-[10px] text-amber-300 font-semibold tracking-wider uppercase block">Mozambique Origin • July – Oct</span>
+                <h3 class="text-lg font-bold text-white leading-tight drop-shadow-md">Pigeon Peas (White)</h3>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex flex-wrap gap-1.5 mb-3.5">
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>2026 New Crop</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Milling Grade Tur</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>98% Purity Min</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Machine Cleaned</span>
+              </div>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">White pigeon peas (Tur / Arhar) from Mozambique are widely traded for dhal milling and food consumption.</p>
+              <div class="bg-slate-50 rounded-xl p-3 border border-slate-100 mb-4 grid grid-cols-2 gap-2 text-xs">
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Moisture</span><span class="font-bold text-slate-800">12% Max</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Purity</span><span class="font-bold text-emerald-800">98% Min</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Packing</span><span class="font-semibold text-slate-700 truncate block">50 KG PP Bags</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Port</span><span class="font-semibold text-amber-700">FOB Nacala</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex items-center gap-2">
+            <button onclick="openProductModal('pigeon-peas-white')" class="flex-1 py-2.5 px-3 rounded-xl bg-[#071F14] hover:bg-[#0B291B] text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition border border-amber-400/20 hover:border-amber-400/50">
+              <i class="fa-regular fa-file-lines text-amber-400"></i>
+              <span>Export Specs</span>
+            </button>
+            <button onclick="prefillRfqCommodity('Pigeon Peas (White)')" class="py-2.5 px-3 rounded-xl btn-gold text-xs font-bold flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Quote</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 6. Pigeon Peas Red -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-350 border border-slate-200">
+          <div>
+            <div class="product-image-container h-56 bg-slate-900 relative">
+              <img src="assets/products/pigeon-peas-red.jpg" alt="Pigeon Peas Red Mozambique Origin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="eager" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#071F14]/90 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-400/30 flex items-center gap-1.5 shadow-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                Pulses & Food Grains
+              </div>
+              <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-300 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-400/30 flex items-center gap-1">
+                <span>🌱</span> 2026 New Crop
+              </div>
+              <div class="absolute bottom-3 left-3 right-3">
+                <span class="text-[10px] text-amber-300 font-semibold tracking-wider uppercase block">Mozambique Origin • July – Oct</span>
+                <h3 class="text-lg font-bold text-white leading-tight drop-shadow-md">Pigeon Peas (Red)</h3>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex flex-wrap gap-1.5 mb-3.5">
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>2026 New Crop</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>African Red Tur</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>98% Purity Min</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Destoned & Cleaned</span>
+              </div>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">Red pigeon peas from Mozambique are well suited for whole-pulse cooking and commercial milling into split peas.</p>
+              <div class="bg-slate-50 rounded-xl p-3 border border-slate-100 mb-4 grid grid-cols-2 gap-2 text-xs">
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Moisture</span><span class="font-bold text-slate-800">12% Max</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Purity</span><span class="font-bold text-emerald-800">98% Min</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Packing</span><span class="font-semibold text-slate-700 truncate block">50 KG PP Bags</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Port</span><span class="font-semibold text-amber-700">FOB Nacala</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex items-center gap-2">
+            <button onclick="openProductModal('pigeon-peas-red')" class="flex-1 py-2.5 px-3 rounded-xl bg-[#071F14] hover:bg-[#0B291B] text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition border border-amber-400/20 hover:border-amber-400/50">
+              <i class="fa-regular fa-file-lines text-amber-400"></i>
+              <span>Export Specs</span>
+            </button>
+            <button onclick="prefillRfqCommodity('Pigeon Peas (Red)')" class="py-2.5 px-3 rounded-xl btn-gold text-xs font-bold flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Quote</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 7. Kidney Beans Red -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-350 border border-slate-200">
+          <div>
+            <div class="product-image-container h-56 bg-slate-900 relative">
+              <img src="assets/products/kidney-beans-red.jpg" alt="Red Kidney Beans Mozambique Origin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="eager" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#071F14]/90 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-400/30 flex items-center gap-1.5 shadow-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                Dry Beans & Pulses
+              </div>
+              <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-300 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-400/30 flex items-center gap-1">
+                <span>🌱</span> 2026 New Crop
+              </div>
+              <div class="absolute bottom-3 left-3 right-3">
+                <span class="text-[10px] text-amber-300 font-semibold tracking-wider uppercase block">Mozambique Origin • May – Aug</span>
+                <h3 class="text-lg font-bold text-white leading-tight drop-shadow-md">Kidney Beans (Red)</h3>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex flex-wrap gap-1.5 mb-3.5">
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>2026 New Crop</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Non-GMO</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Dark Red</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>14% Moisture Max</span>
+              </div>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">Red kidney beans grown in Mozambique offer rich color, firm texture and excellent cooking performance.</p>
+              <div class="bg-slate-50 rounded-xl p-3 border border-slate-100 mb-4 grid grid-cols-2 gap-2 text-xs">
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Moisture</span><span class="font-bold text-slate-800">14% Max</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Purity</span><span class="font-bold text-emerald-800">99% Min</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Packing</span><span class="font-semibold text-slate-700 truncate block">50 KG PP Bags</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Port</span><span class="font-semibold text-amber-700">FOB Nacala</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex items-center gap-2">
+            <button onclick="openProductModal('kidney-beans-red')" class="flex-1 py-2.5 px-3 rounded-xl bg-[#071F14] hover:bg-[#0B291B] text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition border border-amber-400/20 hover:border-amber-400/50">
+              <i class="fa-regular fa-file-lines text-amber-400"></i>
+              <span>Export Specs</span>
+            </button>
+            <button onclick="prefillRfqCommodity('Kidney Beans (Red)')" class="py-2.5 px-3 rounded-xl btn-gold text-xs font-bold flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Quote</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 8. Kidney Beans White -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-350 border border-slate-200">
+          <div>
+            <div class="product-image-container h-56 bg-slate-900 relative">
+              <img src="assets/products/kidney-beans-white.jpg" alt="White Kidney Beans Mozambique Origin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="eager" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#071F14]/90 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-400/30 flex items-center gap-1.5 shadow-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                Dry Beans & Pulses
+              </div>
+              <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-300 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-400/30 flex items-center gap-1">
+                <span>🌱</span> 2026 New Crop
+              </div>
+              <div class="absolute bottom-3 left-3 right-3">
+                <span class="text-[10px] text-amber-300 font-semibold tracking-wider uppercase block">Mozambique Origin • May – Aug</span>
+                <h3 class="text-lg font-bold text-white leading-tight drop-shadow-md">Kidney Beans (White)</h3>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex flex-wrap gap-1.5 mb-3.5">
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>2026 New Crop</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Cannellini Type</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Pearl White</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>14% Moisture Max</span>
+              </div>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">White kidney beans (Cannellini type) from Mozambique are clean, uniform in size and popular in international packaging and canning markets.</p>
+              <div class="bg-slate-50 rounded-xl p-3 border border-slate-100 mb-4 grid grid-cols-2 gap-2 text-xs">
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Moisture</span><span class="font-bold text-slate-800">14% Max</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Purity</span><span class="font-bold text-emerald-800">99% Min</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Packing</span><span class="font-semibold text-slate-700 truncate block">50 KG PP Bags</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Port</span><span class="font-semibold text-amber-700">FOB Nacala</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex items-center gap-2">
+            <button onclick="openProductModal('kidney-beans-white')" class="flex-1 py-2.5 px-3 rounded-xl bg-[#071F14] hover:bg-[#0B291B] text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition border border-amber-400/20 hover:border-amber-400/50">
+              <i class="fa-regular fa-file-lines text-amber-400"></i>
+              <span>Export Specs</span>
+            </button>
+            <button onclick="prefillRfqCommodity('Kidney Beans (White)')" class="py-2.5 px-3 rounded-xl btn-gold text-xs font-bold flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Quote</span>
+            </button>
+          </div>
+        </div>
+
       </div>
 
       <!-- Live Container Stuffing Tool -->
@@ -1568,6 +1936,6 @@
   </a>
 
   <!-- Application Logic -->
-  <script src="app.js"></script>
+  <script src="app.js?v=3.0"></script>
 </body>
 </html>

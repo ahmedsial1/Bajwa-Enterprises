@@ -4,6 +4,7 @@
   "description": "BAJWA ENTERPRISES LTD. - B2B Agricultural Commodity Export Website (Nampula & Nacala Port, Mozambique)",
   "main": "index.html",
   "scripts": {
+    "build": "echo 'Static build ready'",
     "start": "python3 server.py"
   },
   "keywords": [

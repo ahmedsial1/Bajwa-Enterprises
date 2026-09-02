@@ -15,7 +15,7 @@ const COMMODITIES_DATA = [
     categoryLabel: "Oilseeds & Grains",
     scientificName: "Sesamum indicum",
     harvestSeason: "May – August",
-    image: "https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=900&q=80",
+    image: "assets/products/sesame-seed.jpg",
     badges: ["2026 New Crop", "Purity 99% Min", "Machine Cleaned", "FOB Nacala"],
     shortDesc: "Mozambique sesame seed is valued for its natural oil content, clean appearance and versatility in international food and industrial markets.",
     cropProfile: "New-season sesame, naturally grown and suitable for bulk export.",
@@ -56,7 +56,7 @@ const COMMODITIES_DATA = [
     categoryLabel: "Oilseeds & Raw Nuts",
     scientificName: "Arachis hypogaea",
     harvestSeason: "April – August",
-    image: "https://images.unsplash.com/photo-1567892328122-c2e8cfaefb58?auto=format&fit=crop&w=900&q=80",
+    image: "assets/products/peanuts-red-skin.jpg",
     badges: ["2026 New Crop", "Red Skin Bold", "40/50 & 50/60 Count", "7% Moisture Max"],
     shortDesc: "Mozambique red peanut kernels are known for their attractive red skin, distinctive flavour and nutritional value. Selected for wholesale and food-processing applications.",
     cropProfile: "New-crop red-skinned peanut kernels selected for wholesale and food-processing applications.",
@@ -96,7 +96,7 @@ const COMMODITIES_DATA = [
     categoryLabel: "Premium Tree Nuts",
     scientificName: "Macadamia integrifolia",
     harvestSeason: "March – August",
-    image: "https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?auto=format&fit=crop&w=900&q=80",
+    image: "assets/products/macadamia-nuts.jpg",
     badges: ["2026 New Crop", "Style 0/1/2 & Halves", "1.5% Moisture Max", "Vacuum Cartons"],
     shortDesc: "Mozambique-grown macadamia nuts are a premium tree-nut commodity appreciated for their creamy texture, delicate flavor and high-value nutritional profile.",
     cropProfile: "2026 new-crop macadamia, harvested during the principal March–August season.",
@@ -135,7 +135,7 @@ const COMMODITIES_DATA = [
     categoryLabel: "Raw Commodity Nuts",
     scientificName: "Anacardium occidentale",
     harvestSeason: "September – October (and following months)",
-    image: "https://images.unsplash.com/photo-1509914398867-0740921fa446?auto=format&fit=crop&w=900&q=80",
+    image: "assets/products/raw-cashew-nuts.jpg",
     badges: ["2026 New Crop", "Out-Turn 48-50 lbs", "80 KG Jute Bags", "Shelling 28-30%"],
     shortDesc: "Mozambique is an established origin for raw cashew nuts, offering an important agricultural commodity for processors and international traders with excellent KOR out-turn.",
     cropProfile: "2026 new-crop Raw Cashew Nuts (RCN), with the main season generally beginning around September–October.",
@@ -175,7 +175,7 @@ const COMMODITIES_DATA = [
     categoryLabel: "Pulses & Legumes",
     scientificName: "Cajanus cajan (White / Cream)",
     harvestSeason: "April – August",
-    image: "https://images.unsplash.com/photo-1515543237350-b3eea1ec8082?auto=format&fit=crop&w=900&q=80",
+    image: "assets/products/pigeon-peas-white.jpg",
     badges: ["2026 New Crop", "Milling Grade", "Purity 98% Min", "50 KG PP Bags"],
     shortDesc: "White pigeon peas are an important pulse crop with strong demand across South Asian, Middle Eastern and African food markets. High quality grain suitable for dal milling.",
     cropProfile: "New-crop white pigeon peas produced for domestic consumption and international pulse markets.",
@@ -214,7 +214,7 @@ const COMMODITIES_DATA = [
     categoryLabel: "Pulses & Legumes",
     scientificName: "Cajanus cajan (Red / Brown)",
     harvestSeason: "April – August",
-    image: "https://images.unsplash.com/photo-1585644198355-3e289b3c5826?auto=format&fit=crop&w=900&q=80",
+    image: "assets/products/pigeon-peas-red.jpg",
     badges: ["2026 New Crop", "Purity 98% Min", "Defects 2% Max", "Machine Cleaned"],
     shortDesc: "Mozambique red pigeon peas are a nutritious pulse valued for their flavor, colour and versatility in traditional and commercial food preparation.",
     cropProfile: "New-crop red pigeon peas suitable for bulk international pulse trade.",
@@ -252,7 +252,7 @@ const COMMODITIES_DATA = [
     categoryLabel: "Pulses & Beans",
     scientificName: "Phaseolus vulgaris",
     harvestSeason: "April – August",
-    image: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=900&q=80",
+    image: "assets/products/kidney-beans-red.jpg",
     badges: ["2026 New Crop", "Uniform Dark Red", "Non-GMO", "Count 160-180"],
     shortDesc: "Red kidney beans are a widely traded pulse recognized for their deep red colour, firm texture and nutritional value. Selected for wholesale and commercial food markets.",
     cropProfile: "New-crop red kidney beans selected for wholesale and commercial food markets.",
@@ -292,7 +292,7 @@ const COMMODITIES_DATA = [
     categoryLabel: "Pulses & Beans",
     scientificName: "Phaseolus vulgaris",
     harvestSeason: "April – August",
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80",
+    image: "assets/products/kidney-beans-white.jpg",
     badges: ["2026 New Crop", "Uniform White", "Non-GMO", "Count 130-150"],
     shortDesc: "White kidney beans are a versatile pulse with a mild flavour and creamy texture, making them suitable for a wide range of international food applications.",
     cropProfile: "New-crop white kidney beans suitable for bulk food distribution and processing.",
@@ -481,19 +481,28 @@ function renderComparisonTable() {
   tableBody.innerHTML = COMMODITIES_DATA.map(p => {
     return `
       <tr class="border-b border-slate-200 hover:bg-slate-50/80 transition text-xs">
-        <td class="py-3.5 px-4 font-bold text-slate-900 flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-          <span>${p.name}</span>
+        <td class="py-3 px-4 font-bold text-slate-900 flex items-center gap-3">
+          <div class="w-11 h-11 rounded-xl overflow-hidden border border-slate-200 flex-shrink-0 bg-slate-900 shadow-sm">
+            <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+          <div>
+            <span class="block font-heading font-bold text-slate-900 text-sm">${p.name}</span>
+            <span class="text-[10px] text-slate-500 font-medium italic">${p.scientificName}</span>
+          </div>
         </td>
-        <td class="py-3.5 px-4 text-emerald-900 font-semibold">${p.origin} (${p.crop})</td>
-        <td class="py-3.5 px-4 text-slate-700 font-medium">
-          ${p.keySpecs.purity || p.keySpecs.outTurn || p.keySpecs.grade || p.keySpecs.color || 'Premium'}
+        <td class="py-3 px-4 text-emerald-900 font-semibold">
+          <span class="inline-flex items-center gap-1 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 text-emerald-900">
+            <i class="fa-solid fa-seedling text-[10px] text-emerald-600"></i> ${p.origin} (${p.crop})
+          </span>
         </td>
-        <td class="py-3.5 px-4 text-slate-700">${p.packaging}</td>
-        <td class="py-3.5 px-4 text-slate-700 font-medium">${p.loadingCapacity.split('/')[0]}</td>
-        <td class="py-3.5 px-4 font-bold text-amber-700">FOB Nacala</td>
-        <td class="py-3.5 px-4 text-right">
-          <button onclick="openProductModal('${p.id}')" class="px-2.5 py-1 rounded bg-[#071F14] text-amber-300 text-[11px] font-semibold hover:bg-emerald-950 transition">
+        <td class="py-3 px-4 text-slate-800 font-medium">
+          ${p.keySpecs.purity || p.keySpecs.outTurn || p.keySpecs.grade || p.keySpecs.color || 'Export Grade'}
+        </td>
+        <td class="py-3 px-4 text-slate-700 font-medium">${p.packaging}</td>
+        <td class="py-3 px-4 text-slate-700 font-medium">${p.loadingCapacity.split('/')[0]}</td>
+        <td class="py-3 px-4 font-bold text-amber-700">FOB Nacala</td>
+        <td class="py-3 px-4 text-right">
+          <button onclick="openProductModal('${p.id}')" class="px-3 py-1.5 rounded-lg bg-[#071F14] text-amber-300 text-xs font-semibold hover:bg-emerald-950 transition border border-amber-400/30">
             View Specs
           </button>
         </td>
@@ -938,11 +947,13 @@ function printSpecSheet(productId) {
       <title>BAJWA ENTERPRISES LTD. - Export Spec Sheet - ${product.name}</title>
       <style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; padding: 40px; color: #111827; background: #fff; }
-        .header { border-bottom: 2px solid #D4AF37; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .header { border-bottom: 2px solid #D4AF37; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center; }
         .brand { font-size: 24px; font-weight: 900; color: #071F14; }
         .tagline { font-size: 11px; color: #B38F26; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; }
         .title { font-size: 20px; font-weight: bold; color: #071F14; margin-top: 5px; }
         .meta-bar { background: #f8fafc; padding: 10px 15px; border-radius: 6px; font-size: 12px; margin-bottom: 20px; border-left: 4px solid #071F14; }
+        .prod-hero { display: flex; gap: 20px; align-items: flex-start; margin-bottom: 20px; }
+        .prod-hero img { width: 140px; height: 140px; object-fit: cover; border-radius: 8px; border: 1px solid #cbd5e1; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 25px; font-size: 12px; }
         th, td { padding: 8px 12px; border: 1px solid #e2e8f0; text-align: left; }
         th { background: #071F14; color: #F3C644; font-weight: bold; text-transform: uppercase; font-size: 11px; }
@@ -970,6 +981,20 @@ function printSpecSheet(productId) {
         <strong>LOADING PORT:</strong> Nacala Port (FOB / CIF / CFR)
       </div>
 
+      <div class="prod-hero">
+        <img src="${product.image}" alt="${product.name}" />
+        <div style="flex: 1;">
+          <div class="section-title" style="margin-top:0;">Product Profile & Description</div>
+          <p style="font-size: 12px; line-height: 1.5; color: #334155; margin: 0 0 8px 0;">
+            ${product.shortDesc}
+          </p>
+          <p style="font-size: 11px; line-height: 1.4; color: #475569; margin: 0;">
+            <strong>Crop Profile:</strong> ${product.cropProfile}<br>
+            <strong>Quality Characteristics:</strong> ${product.qualityCharacteristics}
+          </p>
+        </div>
+      </div>
+
       <div class="section-title">1. Export Specifications Matrix</div>
       <table>
         <thead>
@@ -988,14 +1013,7 @@ function printSpecSheet(productId) {
         </tbody>
       </table>
 
-      <div class="section-title">2. Product Profile & Description</div>
-      <p style="font-size: 12px; line-height: 1.5; color: #334155; margin-bottom: 15px;">
-        ${product.shortDesc}<br>
-        <strong>Crop Profile:</strong> ${product.cropProfile}<br>
-        <strong>Quality Characteristics:</strong> ${product.qualityCharacteristics}
-      </p>
-
-      <div class="section-title">3. Applications & Target Markets</div>
+      <div class="section-title">2. Applications & Target Markets</div>
       <ul style="font-size: 12px; line-height: 1.6; color: #334155;">
         ${product.applications.map(a => `<li>${a}</li>`).join('')}
       </ul>
@@ -1028,11 +1046,13 @@ function downloadProductCatalogue() {
         .brand { font-size: 28px; font-weight: 900; color: #F3C644; }
         .tagline { font-size: 13px; color: #ffffff; letter-spacing: 2px; text-transform: uppercase; margin-top: 5px; }
         .catalog-title { font-size: 22px; font-weight: bold; margin-top: 20px; color: #fff; }
-        .item { page-break-inside: avoid; border: 1px solid #e2e8f0; padding: 15px; border-radius: 6px; margin-bottom: 20px; }
-        .item-title { font-size: 16px; font-weight: bold; color: #071F14; border-bottom: 1px solid #D4AF37; padding-bottom: 4px; margin-bottom: 10px; }
+        .item { page-break-inside: avoid; border: 1px solid #e2e8f0; padding: 15px; border-radius: 6px; margin-bottom: 20px; display: flex; gap: 16px; }
+        .item-img { width: 120px; height: 120px; object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1; flex-shrink: 0; }
+        .item-info { flex: 1; }
+        .item-title { font-size: 15px; font-weight: bold; color: #071F14; border-bottom: 1px solid #D4AF37; padding-bottom: 4px; margin-bottom: 8px; }
         table { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 8px; }
-        th, td { padding: 5px 8px; border: 1px solid #cbd5e1; text-align: left; }
-        th { background: #f1f5f9; font-weight: bold; width: 35%; text-transform: uppercase; }
+        th, td { padding: 4px 6px; border: 1px solid #cbd5e1; text-align: left; }
+        th { background: #f1f5f9; font-weight: bold; width: 35%; text-transform: uppercase; font-size: 10px; }
         .footer { margin-top: 30px; padding-top: 15px; border-top: 1px solid #e2e8f0; font-size: 11px; color: #64748b; text-align: center; }
       </style>
     </head>
@@ -1040,34 +1060,37 @@ function downloadProductCatalogue() {
       <div class="cover">
         <div class="brand">BAJWA ENTERPRISES LTD.</div>
         <div class="tagline">Authentic Quality. Global Reach. • Nampula, Mozambique</div>
-        <div class="catalog-title">AGRICULTURAL EXPORT CATALOGUE</div>
+        <div class="catalog-title">AGRICULTURAL EXPORT CATALOGUE 2026</div>
         <p style="font-size: 12px; color: #cbd5e1; margin-top: 10px;">FOB NACALA • CIF WORLDWIDE | Premium Quality. Reliable Supply. Global Reach.</p>
       </div>
 
       ${COMMODITIES_DATA.map((item, idx) => `
         <div class="item">
-          <div class="item-title">${idx + 1}. ${item.name} (${item.crop}) - Mozambique Origin</div>
-          <p style="font-size: 11px; color: #475569; margin: 0 0 8px 0;">${item.shortDesc}</p>
-          <table>
-            ${Object.entries(item.keySpecs).map(([k, v]) => `
+          <img src="${item.image}" alt="${item.name}" class="item-img" />
+          <div class="item-info">
+            <div class="item-title">${idx + 1}. ${item.name} (${item.crop}) - Mozambique Origin</div>
+            <p style="font-size: 11px; color: #475569; margin: 0 0 6px 0;">${item.shortDesc}</p>
+            <table>
+              ${Object.entries(item.keySpecs).map(([k, v]) => `
+                <tr>
+                  <th>${k.replace(/([A-Z])/g, ' $1')}</th>
+                  <td><strong>${v}</strong></td>
+                </tr>
+              `).join('')}
               <tr>
-                <th>${k.replace(/([A-Z])/g, ' $1')}</th>
-                <td><strong>${v}</strong></td>
+                <th>HARVEST SEASON</th>
+                <td>${item.harvestSeason}</td>
               </tr>
-            `).join('')}
-            <tr>
-              <th>HARVEST SEASON</th>
-              <td>${item.harvestSeason}</td>
-            </tr>
-            <tr>
-              <th>APPLICATIONS</th>
-              <td>${item.applications.join(', ')}</td>
-            </tr>
-            <tr>
-              <th>TARGET MARKETS</th>
-              <td>${item.targetMarkets}</td>
-            </tr>
-          </table>
+              <tr>
+                <th>APPLICATIONS</th>
+                <td>${item.applications.join(', ')}</td>
+              </tr>
+              <tr>
+                <th>TARGET MARKETS</th>
+                <td>${item.targetMarkets}</td>
+              </tr>
+            </table>
+          </div>
         </div>
       `).join('')}
 

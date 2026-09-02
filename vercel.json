@@ -1,6 +1,7 @@
 {
   "version": 2,
   "name": "bajwa-enterprises",
+  "outputDirectory": ".",
   "cleanUrls": true,
   "headers": [
     {

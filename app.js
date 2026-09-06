@@ -2,7 +2,7 @@
  * BAJWA ENTERPRISES LTD. - Official Agricultural Export Platform
  * Data directly synced from BAJWA ENTERPRISES LTD. Official Export Catalogue
  * Headquarters: Nampula, Mozambique | Maritime Loading: Nacala Port (FOB Nacala, CIF / CFR Worldwide)
- * Contact Person: Abdullah Bajwa | WhatsApp: +258 86 693 9060 | Email: abdullahbajwa449@gmail.com
+ * Contact Person: Abdullah Bajwa | WhatsApp: +258 86 693 9060 | Email: bajwaenterpriceslda@gmail.com
  */
 
 const COMMODITIES_DATA = [
@@ -863,7 +863,7 @@ function initRfqGenerator() {
     const encodedMessage = encodeURIComponent(fullMessage);
 
     const whatsappUrl = `https://wa.me/258866939060?text=${encodedMessage}`;
-    const mailtoUrl = `mailto:abdullahbajwa449@gmail.com?subject=${encodeURIComponent(`B2B Commodity RFQ [${rfqRefCode}] - ${commodity} (${volume} ${volumeUnit})`)}&body=${encodedMessage}`;
+    const mailtoUrl = `mailto:bajwaenterpriceslda@gmail.com?subject=${encodeURIComponent(`B2B Commodity RFQ [${rfqRefCode}] - ${commodity} (${volume} ${volumeUnit})`)}&body=${encodedMessage}`;
 
     showRfqSuccessModal({
       refCode: rfqRefCode,
@@ -1021,7 +1021,7 @@ function printSpecSheet(productId) {
 
       <div class="footer">
         <strong>BAJWA ENTERPRISES LTD.</strong> | Nampula, Mozambique | Port: Nacala Port<br>
-        Contact: Abdullah Bajwa | WhatsApp: +258 86 693 9060 | Email: abdullahbajwa449@gmail.com
+        Contact: Abdullah Bajwa | WhatsApp: +258 86 693 9060 | Email: bajwaenterpriceslda@gmail.com
       </div>
       <script>
         window.onload = function() { window.print(); }
@@ -1096,7 +1096,7 @@ function downloadProductCatalogue() {
 
       <div class="footer">
         <strong>BAJWA ENTERPRISES LTD.</strong> • Nampula, Mozambique • Exporting From Mozambique To The World<br>
-        Contact: Abdullah Bajwa | WhatsApp: +258 86 693 9060 | Email: abdullahbajwa449@gmail.com
+        Contact: Abdullah Bajwa | WhatsApp: +258 86 693 9060 | Email: bajwaenterpriceslda@gmail.com
       </div>
       <script>
         window.onload = function() { window.print(); }

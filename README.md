@@ -2,7 +2,7 @@
 
 > **Authentic Quality, Global Reach.**  
 > Headquarters: Nampula, Mozambique | Gateway Port: Nacala Port (Deepwater Indian Ocean Hub)  
-> WhatsApp Business: +258 86 693 9060 | Email: abdullahbajwa449@gmail.com
+> WhatsApp Business: +258 86 693 9060 | Email: bajwaenterpriceslda@gmail.com
 
 ---
 
@@ -48,7 +48,7 @@ A world-class, ultra-responsive, enterprise B2B agricultural commodity export we
 3. **Live Container Stuffing Calculator**: Instant metric ton (MT) and package count calculator for 20 FT vs 40 FT FCL orders.
 4. **Printable Branded Spec Sheet & Digital Catalog Generator**: One-click generation of print-ready formal PDF spec sheets with official corporate letterhead.
 5. **Interactive Global Trade Route Explorer**: Active route matrix showing direct shipping transit times from Nacala Port to India, China, UAE, Turkey, EU, USA, and Vietnam.
-6. **Enterprise B2B RFQ Generator**: Multi-step inquiry form generating pre-formatted trade codes and 1-click dispatch to WhatsApp (`+258 86 693 9060`) and Email (`abdullahbajwa449@gmail.com`).
+6. **Enterprise B2B RFQ Generator**: Multi-step inquiry form generating pre-formatted trade codes and 1-click dispatch to WhatsApp (`+258 86 693 9060`) and Email (`bajwaenterpriceslda@gmail.com`).
 7. **WhatsApp Floating Quick Connect**: Direct 24/7 access to the Nampula & Nacala trade desk.
 
 ---

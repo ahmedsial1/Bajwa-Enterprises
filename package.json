@@ -1,7 +1,7 @@
 {
-  "name": "bajwa-enterprises-ltd",
+  "name": "bajwa-enterprices-lda",
   "version": "1.0.0",
-  "description": "BAJWA ENTERPRISES LTD. - B2B Agricultural Commodity Export Website (Nampula & Nacala Port, Mozambique)",
+  "description": "BAJWA ENTERPRICES LDA - B2B Agricultural Commodity Export Website (Nampula & Nacala Port, Mozambique)",
   "main": "index.html",
   "scripts": {
     "build": "mkdir -p public && cp -r index.html styles.css app.js assets public/ 2>/dev/null || true",
@@ -17,6 +17,6 @@
     "fob-nacala",
     "cif-worldwide"
   ],
-  "author": "BAJWA ENTERPRISES LTD.",
+  "author": "BAJWA ENTERPRICES LDA",
   "license": "ISC"
 }

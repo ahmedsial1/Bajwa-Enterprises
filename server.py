@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Simple HTTP Server for BAJWA ENTERPRISES LTD. Website
+Simple HTTP Server for BAJWA ENTERPRICES LDA Website
 Serves the current directory on an available port and opens the browser.
 """
 import http.server
@@ -34,7 +34,7 @@ if __name__ == "__main__":
     port = find_open_port(PORT)
     url = f"http://localhost:{port}"
     print(f"================================================================")
-    print(f"  BAJWA ENTERPRISES LTD. - Agricultural Commodity Export Platform")
+    print(f"  BAJWA ENTERPRICES LDA - Agricultural Commodity Export Platform")
     print(f"  Serving live at: {url}")
     print(f"  Headquarters: Nampula, Mozambique | Maritime Port: Nacala Port")
     print(f"  Press Ctrl+C to stop the server.")

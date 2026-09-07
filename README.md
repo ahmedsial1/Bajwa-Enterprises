@@ -1,4 +1,4 @@
-# BAJWA ENTERPRISES LTD. - B2B Agricultural Commodity Export Website
+# BAJWA ENTERPRICES LDA - B2B Agricultural Commodity Export Website
 
 > **Authentic Quality, Global Reach.**  
 > Headquarters: Nampula, Mozambique | Gateway Port: Nacala Port (Deepwater Indian Ocean Hub)  
@@ -7,7 +7,7 @@
 ---
 
 ## 🌟 Executive Overview
-A world-class, ultra-responsive, enterprise B2B agricultural commodity export website built for **BAJWA ENTERPRISES LTD.** to showcase Mozambique's premium bulk agricultural products to international buyers across Asia, the Middle East, Europe, and the Americas.
+A world-class, ultra-responsive, enterprise B2B agricultural commodity export website built for **BAJWA ENTERPRICES LDA** to showcase Mozambique's premium bulk agricultural products to international buyers across Asia, the Middle East, Europe, and the Americas.
 
 ---
 

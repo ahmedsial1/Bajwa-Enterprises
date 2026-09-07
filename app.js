@@ -1,6 +1,6 @@
 /**
- * BAJWA ENTERPRISES LTD. - Official Agricultural Export Platform
- * Data directly synced from BAJWA ENTERPRISES LTD. Official Export Catalogue
+ * BAJWA ENTERPRICES LDA - Official Agricultural Export Platform
+ * Data directly synced from BAJWA ENTERPRICES LDA Official Export Catalogue
  * Headquarters: Nampula, Mozambique | Maritime Loading: Nacala Port (FOB Nacala, CIF / CFR Worldwide)
  * Contact Person: Abdullah Bajwa | WhatsApp: +258 86 693 9060 | Email: bajwaenterpriceslda@gmail.com
  */
@@ -855,7 +855,7 @@ function initRfqGenerator() {
       `*SPECIAL PACKING / REMARKS:*`,
       `${comments || 'Standard seaworthy packaging, SGS pre-shipment inspection required.'}`,
       `-----------------------------------------`,
-      `*TO: BAJWA ENTERPRISES LTD.*`,
+      `*TO: BAJWA ENTERPRICES LDA*`,
       `Attn: Abdullah Bajwa | Nampula & Nacala Port, Mozambique`
     ];
 
@@ -944,7 +944,7 @@ function printSpecSheet(productId) {
     <!DOCTYPE html>
     <html>
     <head>
-      <title>BAJWA ENTERPRISES LTD. - Export Spec Sheet - ${product.name}</title>
+      <title>BAJWA ENTERPRICES LDA - Export Spec Sheet - ${product.name}</title>
       <style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; padding: 40px; color: #111827; background: #fff; }
         .header { border-bottom: 2px solid #D4AF37; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: center; }
@@ -963,10 +963,13 @@ function printSpecSheet(productId) {
     </head>
     <body>
       <div class="header">
-        <div>
-          <div class="brand">BAJWA ENTERPRISES LTD.</div>
-          <div class="tagline">Authentic Quality. Global Reach. • Nampula, Mozambique</div>
-          <div class="title">OFFICIAL EXPORT SPECIFICATION SHEET</div>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <img src="assets/branding/official-logo.png" alt="BAJWA ENTERPRICES LDA" style="height: 58px; width: auto; object-fit: contain;" />
+          <div>
+            <div class="brand">BAJWA ENTERPRICES LDA</div>
+            <div class="tagline">Authentic Quality. Global Reach. • Nampula, Mozambique</div>
+            <div class="title">OFFICIAL EXPORT SPECIFICATION SHEET</div>
+          </div>
         </div>
         <div style="text-align: right; font-size: 11px;">
           <div>Doc Ref: BE-SPEC-${product.id.toUpperCase()}</div>
@@ -1020,7 +1023,7 @@ function printSpecSheet(productId) {
       <p style="font-size: 12px; color: #334155; margin-top: 8px;"><strong>Target Markets:</strong> ${product.targetMarkets}</p>
 
       <div class="footer">
-        <strong>BAJWA ENTERPRISES LTD.</strong> | Nampula, Mozambique | Port: Nacala Port<br>
+        <strong>BAJWA ENTERPRICES LDA</strong> | Nampula, Mozambique | Port: Nacala Port<br>
         Contact: Abdullah Bajwa | WhatsApp: +258 86 693 9060 | Email: bajwaenterpriceslda@gmail.com
       </div>
       <script>
@@ -1039,7 +1042,7 @@ function downloadProductCatalogue() {
     <!DOCTYPE html>
     <html>
     <head>
-      <title>BAJWA ENTERPRISES LTD. - Mozambique Agricultural Export Catalogue</title>
+      <title>BAJWA ENTERPRICES LDA - Mozambique Agricultural Export Catalogue</title>
       <style>
         body { font-family: 'Helvetica Neue', Arial, sans-serif; padding: 30px; color: #111827; background: #fff; }
         .cover { text-align: center; padding: 40px 20px; border: 3px solid #D4AF37; margin-bottom: 30px; background: #071F14; color: white; border-radius: 8px; }
@@ -1058,7 +1061,10 @@ function downloadProductCatalogue() {
     </head>
     <body>
       <div class="cover">
-        <div class="brand">BAJWA ENTERPRISES LTD.</div>
+        <div style="display: inline-block; background: #ffffff; padding: 10px 16px; border-radius: 12px; margin-bottom: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+          <img src="assets/branding/official-logo.png" alt="BAJWA ENTERPRICES LDA" style="height: 64px; width: auto; object-fit: contain; display: block; margin: 0 auto;" />
+        </div>
+        <div class="brand">BAJWA ENTERPRICES LDA</div>
         <div class="tagline">Authentic Quality. Global Reach. • Nampula, Mozambique</div>
         <div class="catalog-title">AGRICULTURAL EXPORT CATALOGUE 2026</div>
         <p style="font-size: 12px; color: #cbd5e1; margin-top: 10px;">FOB NACALA • CIF WORLDWIDE | Premium Quality. Reliable Supply. Global Reach.</p>
@@ -1095,7 +1101,7 @@ function downloadProductCatalogue() {
       `).join('')}
 
       <div class="footer">
-        <strong>BAJWA ENTERPRISES LTD.</strong> • Nampula, Mozambique • Exporting From Mozambique To The World<br>
+        <strong>BAJWA ENTERPRICES LDA</strong> • Nampula, Mozambique • Exporting From Mozambique To The World<br>
         Contact: Abdullah Bajwa | WhatsApp: +258 86 693 9060 | Email: bajwaenterpriceslda@gmail.com
       </div>
       <script>

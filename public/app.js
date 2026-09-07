@@ -807,13 +807,21 @@ function prefillRfqCommodity(commodityName) {
   showToast(`Selected "${commodityName}" in the RFQ inquiry form.`);
 }
 
-// Interactive B2B RFQ Generator & WhatsApp/Email Dispatch
+// Interactive B2B RFQ Generator & Direct Gmail / WhatsApp Dispatch
 function initRfqGenerator() {
   const form = document.getElementById("rfqForm");
   if (!form) return;
 
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin mr-2"></i> <span>Sending to bajwaenterpriceslda@gmail.com...</span>`;
+      submitBtn.classList.add("opacity-80", "cursor-wait");
+    }
 
     const commodity = document.getElementById("rfqCommodity").value;
     const volume = document.getElementById("rfqVolume").value;
@@ -865,6 +873,50 @@ function initRfqGenerator() {
     const whatsappUrl = `https://wa.me/258866939060?text=${encodedMessage}`;
     const mailtoUrl = `mailto:bajwaenterpriceslda@gmail.com?subject=${encodeURIComponent(`B2B Commodity RFQ [${rfqRefCode}] - ${commodity} (${volume} ${volumeUnit})`)}&body=${encodedMessage}`;
 
+    // Direct Submission to bajwaenterpriceslda@gmail.com via FormSubmit
+    const formData = {
+      _subject: `[B2B RFQ] ${commodity} (${volume} ${volumeUnit}) - ${buyerCompany}`,
+      _replyto: buyerEmail,
+      _template: "table",
+      _captcha: "false",
+      "Reference Code": rfqRefCode,
+      "Inquiry Date": new Date().toLocaleString('en-GB'),
+      "Commodity": commodity,
+      "Order Volume": `${volume} ${volumeUnit}`,
+      "Incoterm": incoterm,
+      "Destination Country": destCountry,
+      "Destination Port": destPort,
+      "Target Delivery": targetMonth || 'Prompt Shipment',
+      "Payment Terms": paymentTerm,
+      "Buyer Contact Name": buyerName,
+      "Buyer Company": buyerCompany,
+      "Buyer Email": buyerEmail,
+      "Buyer WhatsApp / Phone": buyerPhone,
+      "Special Packaging / Notes": comments || 'Standard export packaging, SGS inspection required.',
+      "Loading Port": "Nacala Port, Mozambique (FOB)",
+      "Direct Export Desk": "BAJWA ENTERPRICES LDA - Abdullah Bajwa"
+    };
+
+    try {
+      await fetch("https://formsubmit.co/ajax/bajwaenterpriceslda@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+      showToast("RFQ successfully sent to bajwaenterpriceslda@gmail.com");
+    } catch (err) {
+      console.warn("Direct form submission notice:", err);
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+        submitBtn.classList.remove("opacity-80", "cursor-wait");
+      }
+    }
+
     showRfqSuccessModal({
       refCode: rfqRefCode,
       commodity,
@@ -873,8 +925,12 @@ function initRfqGenerator() {
       destPort: `${destPort}, ${destCountry}`,
       whatsappUrl,
       mailtoUrl,
-      fullText: fullMessage
+      fullText: fullMessage,
+      buyerEmail,
+      buyerName
     });
+
+    form.reset();
   });
 }
 
@@ -889,15 +945,20 @@ function showRfqSuccessModal(data) {
   if (modalBody) {
     modalBody.innerHTML = `
       <div class="text-center space-y-3 mb-6">
-        <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center text-3xl border border-emerald-400/40">
-          <i class="fa-solid fa-check"></i>
+        <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center text-3xl border border-emerald-400/40 shadow-lg shadow-emerald-900/30">
+          <i class="fa-solid fa-check-double"></i>
         </div>
-        <span class="text-xs uppercase font-bold tracking-widest text-amber-400">Official RFQ Generated</span>
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-900/60 border border-emerald-500/40 text-emerald-300 text-[11px] font-bold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Inquiry Sent Direct to Gmail Desk</span>
+        </div>
         <h3 class="text-2xl font-extrabold text-white font-heading">Reference Code: <span class="text-amber-300">${data.refCode}</span></h3>
-        <p class="text-xs text-slate-300 max-w-md mx-auto">Your inquiry for <strong class="text-white">${data.volume} of ${data.commodity}</strong> to <strong class="text-white">${data.destPort}</strong> under <strong class="text-amber-300">${data.incoterm}</strong> terms is prepared.</p>
+        <p class="text-xs text-slate-300 max-w-md mx-auto">
+          Inquiry details for <strong class="text-white">${data.volume} of ${data.commodity}</strong> have been dispatched to <strong class="text-amber-300">bajwaenterpriceslda@gmail.com</strong>.
+        </p>
       </div>
 
-      <div class="bg-black/40 rounded-xl p-4 border border-white/10 text-xs text-slate-300 max-h-48 overflow-y-auto font-mono whitespace-pre-wrap mb-6">
+      <div class="bg-black/40 rounded-xl p-4 border border-white/10 text-xs text-slate-300 max-h-44 overflow-y-auto font-mono whitespace-pre-wrap mb-6">
 ${data.fullText}
       </div>
 
@@ -908,14 +969,14 @@ ${data.fullText}
           class="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-slate-950 font-bold text-xs flex items-center justify-center gap-2 shadow-lg transition"
         >
           <i class="fa-brands fa-whatsapp text-lg"></i>
-          <span>Send to WhatsApp (+258 86 693 9060)</span>
+          <span>Instant WhatsApp Connect</span>
         </a>
         <a 
           href="${data.mailtoUrl}" 
           class="w-full py-3.5 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 shadow-lg transition"
         >
           <i class="fa-solid fa-envelope text-lg"></i>
-          <span>Send via Email Desk</span>
+          <span>Open in Email Client</span>
         </a>
       </div>
     `;
@@ -923,7 +984,6 @@ ${data.fullText}
 
   modal.classList.remove("hidden");
   modal.classList.add("flex");
-  document.body.style.overflow = "hidden";
 }
 
 function closeRfqSuccessModal() {

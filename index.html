@@ -89,54 +89,80 @@
   <!-- =========================================================================
        NAVIGATION HEADER (STICKY LUXURY BAR)
        ========================================================================= -->
-  <header id="mainHeader" class="sticky top-0 z-50 transition-all duration-300 glass-nav py-4">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+  <header id="mainHeader" class="sticky top-0 z-50 transition-all duration-300 glass-nav py-3 sm:py-3.5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Brand Logo Crest & Tagline -->
-      <a href="#" class="flex items-center gap-3.5 group">
-        <!-- Official Logo Icon -->
-        <div class="w-12 h-12 rounded-xl bg-white p-1 shadow-lg shadow-amber-500/25 group-hover:scale-105 transition-transform duration-300 overflow-hidden flex items-center justify-center border border-amber-400/40">
-          <img src="assets/branding/official-logo.png" alt="Bajwa Enterprices LDA Logo" class="w-full h-full object-contain" />
-        </div>
-        <div class="flex flex-col">
-          <span class="font-heading font-extrabold text-lg sm:text-xl tracking-wide text-white leading-none group-hover:text-amber-300 transition-colors">
-            BAJWA ENTERPRICES <span class="text-amber-400 text-xs font-semibold px-1.5 py-0.5 rounded bg-amber-400/10 border border-amber-400/30 ml-1">LDA</span>
-          </span>
-          <span class="text-[10px] sm:text-[11px] text-amber-300 font-bold tracking-widest uppercase mt-1">
-            Global Commodity Trading
-          </span>
-        </div>
-      </a>
-
-      <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-slate-200">
-        <a href="#hero" class="hover:text-amber-300 transition-colors py-1">Home</a>
-        <a href="#about" class="hover:text-amber-300 transition-colors py-1">About Us</a>
-        <a href="#products" class="hover:text-amber-300 transition-colors py-1">Products</a>
-        <a href="#comparison" class="hover:text-amber-300 transition-colors py-1">Portfolio Matrix</a>
-        <a href="#quality" class="hover:text-amber-300 transition-colors py-1">Quality & SGS</a>
-        <a href="#logistics" class="hover:text-amber-300 transition-colors py-1">Logistics</a>
-        <a href="#why-us" class="hover:text-amber-300 transition-colors py-1">Why Us</a>
-        <a href="#rfq-section" class="hover:text-amber-300 transition-colors py-1">RFQ / Contact</a>
-      </nav>
-
-      <!-- Right Header Actions -->
-      <div class="hidden sm:flex items-center gap-3">
-        <button onclick="downloadProductCatalogue()" class="hidden xl:flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold border border-white/15 transition">
-          <i class="fa-solid fa-file-pdf text-amber-400"></i>
-          <span>Catalogue PDF</span>
-        </button>
-
-        <a href="#rfq-section" class="btn-gold px-5 py-2.5 rounded-xl text-xs flex items-center gap-2">
-          <i class="fa-solid fa-file-invoice"></i>
-          <span>Request a Quote (RFQ)</span>
+      <!-- Desktop & Laptop Layout (Large Screens) -->
+      <div class="hidden lg:flex items-center justify-between gap-4">
+        
+        <!-- Left: Transparent Brand Logo (Enlarged) -->
+        <a href="#" class="flex items-center gap-3.5 group shrink-0">
+          <img 
+            src="assets/branding/logo-transparent-light.png" 
+            alt="Bajwa Enterprices LDA" 
+            class="h-14 xl:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-md"
+          />
         </a>
+
+        <!-- Center: Refined Laptop / Desktop Nav Menu -->
+        <nav class="flex items-center gap-1 xl:gap-2 text-[12px] xl:text-[13px] font-semibold tracking-wider uppercase text-slate-200">
+          <a href="#hero" class="px-2.5 py-1.5 rounded-lg hover:text-amber-300 hover:bg-white/5 transition-all">Home</a>
+          <a href="#about" class="px-2.5 py-1.5 rounded-lg hover:text-amber-300 hover:bg-white/5 transition-all">About</a>
+          <a href="#products" class="px-2.5 py-1.5 rounded-lg hover:text-amber-300 hover:bg-white/5 transition-all">Products</a>
+          <a href="#comparison" class="px-2.5 py-1.5 rounded-lg hover:text-amber-300 hover:bg-white/5 transition-all whitespace-nowrap">Portfolio</a>
+          <a href="#quality" class="px-2.5 py-1.5 rounded-lg hover:text-amber-300 hover:bg-white/5 transition-all whitespace-nowrap">Quality & SGS</a>
+          <a href="#logistics" class="px-2.5 py-1.5 rounded-lg hover:text-amber-300 hover:bg-white/5 transition-all">Logistics</a>
+          <a href="#why-us" class="px-2.5 py-1.5 rounded-lg hover:text-amber-300 hover:bg-white/5 transition-all whitespace-nowrap">Why Us</a>
+          <a href="#rfq-section" class="px-2.5 py-1.5 rounded-lg hover:text-amber-300 hover:bg-white/5 transition-all text-amber-300">RFQ</a>
+        </nav>
+
+        <!-- Right: Action Buttons -->
+        <div class="flex items-center gap-2.5 shrink-0">
+          <button onclick="downloadProductCatalogue()" class="hidden xl:flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold border border-white/15 transition">
+            <i class="fa-solid fa-file-pdf text-amber-400"></i>
+            <span>Catalogue</span>
+          </button>
+
+          <a href="#rfq-section" class="btn-gold px-4 xl:px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 font-bold shadow-lg shadow-amber-500/20">
+            <i class="fa-solid fa-file-invoice"></i>
+            <span>Request a Quote</span>
+          </a>
+        </div>
+
       </div>
 
-      <!-- Mobile Hamburger Button -->
-      <button id="mobileMenuBtn" class="lg:hidden p-2.5 rounded-xl bg-white/10 text-white hover:bg-white/20 border border-white/15 transition">
-        <i class="fa-solid fa-bars text-xl"></i>
-      </button>
+      <!-- Mobile & Tablet Layout (Logo Middle, Menu Right, WhatsApp Left) -->
+      <div class="flex lg:hidden items-center justify-between gap-3 w-full">
+        
+        <!-- Left: Quick WhatsApp Button (Balanced Symmetry) -->
+        <a 
+          href="https://wa.me/258866939060" 
+          target="_blank" 
+          class="w-10 h-10 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-400 border border-emerald-400/40 flex items-center justify-center text-lg transition shrink-0 shadow-md"
+          title="WhatsApp Trade Desk"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <!-- Middle: Prominent Centered Transparent Logo -->
+        <a href="#" class="flex items-center justify-center py-0.5 mx-auto">
+          <img 
+            src="assets/branding/logo-transparent-light.png" 
+            alt="Bajwa Enterprices LDA" 
+            class="h-12 sm:h-14 w-auto object-contain max-w-[210px] drop-shadow-md" 
+          />
+        </a>
+
+        <!-- Right: Mobile Menu Button -->
+        <button 
+          id="mobileMenuBtn" 
+          class="w-10 h-10 rounded-xl bg-white/10 text-white hover:bg-white/20 border border-white/15 flex items-center justify-center text-xl transition shrink-0 shadow-md"
+          aria-label="Open Navigation Menu"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+      </div>
 
     </div>
   </header>
@@ -146,28 +172,22 @@
     <div>
       <div class="flex items-center justify-between border-b border-white/10 pb-5 mb-6">
         <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-white p-0.5 overflow-hidden shadow-md flex items-center justify-center border border-amber-400/40">
-            <img src="assets/branding/official-logo.png" alt="Bajwa Enterprices Logo" class="w-full h-full object-contain" />
-          </div>
-          <div>
-            <span class="font-heading font-bold text-white text-base">BAJWA ENTERPRICES LDA</span>
-            <span class="block text-[10px] text-amber-300 uppercase tracking-widest font-semibold">Global Commodity Trading</span>
-          </div>
+          <img src="assets/branding/logo-transparent-light.png" alt="Bajwa Enterprices LDA" class="h-12 w-auto object-contain" />
         </div>
         <button id="mobileDrawerClose" class="p-2 text-slate-300 hover:text-white bg-white/10 rounded-lg">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
 
-      <nav class="flex flex-col gap-3.5 text-sm font-medium text-slate-200">
-        <a href="#hero" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg">Home</a>
-        <a href="#about" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg">About Bajwa Enterprices</a>
-        <a href="#products" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg">Agricultural Products</a>
-        <a href="#comparison" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg">Product Portfolio Matrix</a>
-        <a href="#quality" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg">Quality & SGS Compliance</a>
-        <a href="#logistics" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg">Packing & Export Logistics</a>
-        <a href="#why-us" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg">Why Bajwa Enterprices?</a>
-        <a href="#rfq-section" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg text-amber-300 font-bold">Request a Quote (RFQ)</a>
+      <nav class="flex flex-col gap-3 text-sm font-medium text-slate-200">
+        <a href="#hero" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg flex items-center gap-3"><i class="fa-solid fa-house text-amber-400 text-xs w-4"></i> Home</a>
+        <a href="#about" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg flex items-center gap-3"><i class="fa-solid fa-building text-amber-400 text-xs w-4"></i> About Bajwa Enterprices</a>
+        <a href="#products" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg flex items-center gap-3"><i class="fa-solid fa-seedling text-amber-400 text-xs w-4"></i> Agricultural Products</a>
+        <a href="#comparison" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg flex items-center gap-3"><i class="fa-solid fa-table-cells text-amber-400 text-xs w-4"></i> Product Matrix</a>
+        <a href="#quality" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg flex items-center gap-3"><i class="fa-solid fa-award text-amber-400 text-xs w-4"></i> Quality & SGS Compliance</a>
+        <a href="#logistics" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg flex items-center gap-3"><i class="fa-solid fa-ship text-amber-400 text-xs w-4"></i> Packing & Export Logistics</a>
+        <a href="#why-us" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg flex items-center gap-3"><i class="fa-solid fa-handshake text-amber-400 text-xs w-4"></i> Why Bajwa Enterprices?</a>
+        <a href="#rfq-section" class="mobile-nav-link p-2.5 hover:bg-white/5 rounded-lg flex items-center gap-3 text-amber-300 font-bold bg-amber-400/10 border border-amber-400/30"><i class="fa-solid fa-file-invoice text-amber-400 text-xs w-4"></i> Request a Quote (RFQ)</a>
       </nav>
     </div>
 
@@ -176,9 +196,9 @@
         <i class="fa-solid fa-file-pdf text-amber-400"></i>
         <span>Download Official PDF Catalogue</span>
       </button>
-      <a href="https://wa.me/258866939060" target="_blank" class="w-full py-3 rounded-xl bg-[#25D366] text-slate-950 text-xs font-bold flex items-center justify-center gap-2">
+      <a href="https://wa.me/258866939060" target="_blank" class="w-full py-3 rounded-xl bg-[#25D366] text-slate-950 text-xs font-bold flex items-center justify-center gap-2 shadow-lg">
         <i class="fa-brands fa-whatsapp text-lg"></i>
-        <span>WhatsApp Quick Connect (+258 86 693 9060)</span>
+        <span>WhatsApp Trade Desk (+258 86 693 9060)</span>
       </a>
     </div>
   </div>
@@ -263,9 +283,7 @@
                 <span class="text-[10px] text-amber-400 font-bold uppercase tracking-widest block">Official B2B Export Desk</span>
                 <h3 class="text-xl font-bold font-heading text-white">BAJWA ENTERPRICES LDA</h3>
               </div>
-              <div class="w-12 h-12 rounded-xl bg-white p-1 border border-amber-400/40 flex items-center justify-center overflow-hidden shadow-md">
-                <img src="assets/branding/official-logo.png" alt="Bajwa Enterprices Logo" class="w-full h-full object-contain" />
-              </div>
+              <img src="assets/branding/logo-transparent-light.png" alt="Bajwa Enterprices LDA" class="h-14 w-auto object-contain drop-shadow-md" />
             </div>
 
             <!-- Image Composition -->
@@ -1692,13 +1710,13 @@
           <!-- Submit Button Group -->
           <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200">
             <div class="text-xs text-slate-500 flex items-center gap-2">
-              <i class="fa-solid fa-lock text-emerald-800"></i>
-              <span>Direct encrypted inquiry dispatched to Abdullah Bajwa (Commercial Trade Desk).</span>
+              <i class="fa-solid fa-envelope-circle-check text-emerald-800 text-sm"></i>
+              <span>Inquiry dispatched directly to <strong>bajwaenterpriceslda@gmail.com</strong> with 1-click WhatsApp confirmation.</span>
             </div>
 
-            <button type="submit" class="w-full sm:w-auto px-8 py-4 rounded-xl btn-gold text-xs font-extrabold flex items-center justify-center gap-2.5 shadow-xl">
+            <button type="submit" class="w-full sm:w-auto px-8 py-4 rounded-xl btn-gold text-xs font-extrabold flex items-center justify-center gap-2.5 shadow-xl transition hover:scale-[1.02]">
               <i class="fa-solid fa-paper-plane"></i>
-              <span>REQUEST FOB / CIF QUOTATION</span>
+              <span>SUBMIT RFQ / INQUIRY</span>
             </button>
           </div>
 
@@ -1798,13 +1816,7 @@
         <!-- Column 1: Company Profile -->
         <div class="lg:col-span-4 space-y-4">
           <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-xl bg-white p-1 overflow-hidden shadow-md flex items-center justify-center border border-amber-400/40">
-              <img src="assets/branding/official-logo.png" alt="Bajwa Enterprices Logo" class="w-full h-full object-contain" />
-            </div>
-            <div>
-              <span class="font-heading font-extrabold text-white text-lg">BAJWA ENTERPRICES LDA</span>
-              <span class="block text-[10px] text-amber-400 tracking-widest uppercase font-semibold">Global Commodity Trading</span>
-            </div>
+            <img src="assets/branding/logo-transparent-light.png" alt="Bajwa Enterprices LDA" class="h-16 sm:h-20 w-auto object-contain drop-shadow-md" />
           </div>
 
           <p class="text-xs text-slate-400 leading-relaxed">

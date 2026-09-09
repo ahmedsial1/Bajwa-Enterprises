@@ -20,7 +20,7 @@ A world-class, ultra-responsive, enterprise B2B agricultural commodity export we
 
 ---
 
-## 🌾 Core Export Commodity Portfolio (8 Products)
+## 🌾 Core Export Commodity Portfolio (9 Products)
 
 1. **Sesame Seed (New Crop 2026)**
    - *Specs*: Purity 99% Min | Moisture 8% Max | Oil Content 50% Min | Admixture 1% Max | FFA 1.5% Max | Machine Cleaned | 50 KG PP Bags.
@@ -38,6 +38,8 @@ A world-class, ultra-responsive, enterprise B2B agricultural commodity export we
    - *Specs*: Purity 99% Min | Moisture 14% Max | Count 160-180 grains / 100g | Non-GMO Certified.
 8. **White Kidney Beans (Cannellini Type)**
    - *Specs*: Purity 99% Min | Moisture 14% Max | Count 130-150 grains / 100g | Uniform Pearl White.
+9. **Wheat Bran / Farelo de Trigo (Animal Feed Grade)**
+   - *Specs*: Protein 15.0% Min | Fiber 12.0% Max | Moisture 14.0% Max | Fat 3.5-5.0% | Ash 6.0% Max | Non-GMO | 50 KG PP Bags or Bulk Vessel.
 
 ---
 

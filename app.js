@@ -322,10 +322,57 @@ const COMMODITIES_DATA = [
       "Ready meals and vegetarian food processing"
     ],
     targetMarkets: "Middle East, India, UAE, Europe, Africa and international food-processing markets."
+  },
+  {
+    id: "wheat-bran",
+    name: "Wheat Bran (Farelo de Trigo)",
+    crop: "2026 Fresh Production",
+    origin: "Mozambique",
+    category: "grains",
+    categoryLabel: "Animal Feed & Grains",
+    scientificName: "Triticum aestivum (Animal Feed Grade)",
+    harvestSeason: "Year-Round Industrial Milling",
+    image: "assets/products/wheat-bran.jpg",
+    badges: ["Animal Feed Grade", "Protein 15.0% Min", "Fiber 12% Max", "Non-GMO", "FOB Nacala"],
+    shortDesc: "Mozambique premium wheat bran (Farelo de Trigo) is high in digestible crude protein, fiber, and metabolic energy, widely exported for cattle, poultry, and dairy livestock feed.",
+    cropProfile: "Fresh industrial milling wheat bran flakes, free-flowing, clean, and processed under stringent quality standards.",
+    qualityCharacteristics: "Light brown to golden brown fine-to-medium flakes, natural aroma free from mold/mustiness, protein min 15.0%, moisture max 14.0%, fat 3.5-5.0%, ash max 6.0%, aflatoxin <20 ppb.",
+    keySpecs: {
+      origin: "Mozambique",
+      hsCode: "2302.30.00",
+      grade: "Animal Feed Grade (Cattle, Poultry, Dairy)",
+      protein: "Min 15.0%",
+      fiber: "Max 12.0%",
+      moisture: "Max 14.0%",
+      fat: "3.5% – 5.0%",
+      ash: "Max 6.0%",
+      color: "Light Brown to Golden Brown",
+      form: "Fine to Medium Flakes, Free Flowing",
+      foreignMatter: "Max 1.0%",
+      aflatoxin: "Less than 20 PPB",
+      gmoStatus: "Non-GMO Certified",
+      shelfLife: "12 Months in dry ventilated storage",
+      port: "Nacala Port, Mozambique"
+    },
+    packaging: "50 KG PP Bags with Inner Liner OR Bulk in Vessel",
+    loadingCapacity: "22 - 24 MT Per 40 FT FCL | 3,000 - 5,000 MT Bulk Vessel Parcels",
+    containerFcl: "40 FT FCL: 22 - 24 MT (440-480 bags) | Bulk Vessel: 2,000 - 5,000 MT Parcels",
+    loadingPort: "Nacala Port, Mozambique",
+    shippingTerms: "FOB Nacala Port, CFR, CIF Worldwide",
+    inspection: "SGS / Intertek Quality, Weight, Moisture & Phytosanitary Inspection",
+    applications: [
+      "Commercial cattle, dairy & beef cattle feed",
+      "Poultry (broiler & layer) feed rations",
+      "Livestock ruminant dietary energy & fiber supplement",
+      "Feed mill compound pellet mixing",
+      "Complies with Bangladesh BSTI & international feed standards"
+    ],
+    targetMarkets: "Bangladesh (Chittagong/Mongla), India, UAE, Middle East, Vietnam, Africa and international feed millers."
   }
 ];
 
 const TARGET_MARKETS = [
+  { code: "BD", country: "Bangladesh", region: "South Asia", flag: "🇧🇩", mainPorts: "Chittagong (Chattogram), Mongla Port", commodities: "Wheat Bran (Farelo de Trigo), Pigeon Peas, Sesame Seeds", transit: "14 - 18 Days" },
   { code: "IN", country: "India", region: "South Asia", flag: "🇮🇳", mainPorts: "Mundra, Nhava Sheva (JNPT), Chennai", commodities: "Sesame Seeds, Raw Cashew Nuts (RCN), Pigeon Peas (Tur)", transit: "12 - 16 Days" },
   { code: "CN", country: "China", region: "East Asia", flag: "🇨🇳", mainPorts: "Qingdao, Shanghai, Ningbo, Tianjin", commodities: "Sesame Seed, Macadamia Nuts, Peanuts", transit: "22 - 26 Days" },
   { code: "AE", country: "UAE", region: "Middle East", flag: "🇦🇪", mainPorts: "Jebel Ali (Dubai), Port of Dammam", commodities: "Sesame Seeds, Macadamia, Kidney Beans, Pigeon Peas", transit: "10 - 14 Days" },

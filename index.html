@@ -554,7 +554,7 @@
         <!-- Category Filter Pills -->
         <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
           <button data-filter="all" class="tab-active px-4 py-2 rounded-xl text-xs font-bold transition border">
-            All Products (8)
+            All Products (9)
           </button>
           <button data-filter="oilseeds" class="bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-xs font-bold transition">
             Oilseeds & Raw Nuts
@@ -565,6 +565,9 @@
           <button data-filter="pulses" class="bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-xs font-bold transition">
             Pulses & Kidney Beans
           </button>
+          <button data-filter="grains" class="bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 px-4 py-2 rounded-xl text-xs font-bold transition">
+            Animal Feed & Grains
+          </button>
         </div>
 
         <!-- Search Input -->
@@ -573,7 +576,7 @@
           <input 
             type="text" 
             id="commoditySearch" 
-            placeholder="Search Sesame, Cashews, Beans..." 
+            placeholder="Search Sesame, Cashews, Wheat Bran..." 
             class="w-full pl-9 pr-4 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-amber-400 focus:bg-white transition"
           />
         </div>
@@ -945,6 +948,51 @@
               <span>Export Specs</span>
             </button>
             <button onclick="prefillRfqCommodity('Kidney Beans (White)')" class="py-2.5 px-3 rounded-xl btn-gold text-xs font-bold flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Quote</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 9. Wheat Bran (Farelo de Trigo) -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-350 border border-slate-200">
+          <div>
+            <div class="product-image-container h-56 bg-slate-900 relative">
+              <img src="assets/products/wheat-bran.jpg" alt="Wheat Bran Farelo de Trigo Mozambique Origin" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="eager" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-[#071F14]/90 backdrop-blur-md text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-400/30 flex items-center gap-1.5 shadow-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                Animal Feed & Grains
+              </div>
+              <div class="absolute top-3 right-3 bg-black/70 backdrop-blur-md text-amber-300 text-xs font-bold px-2.5 py-1 rounded-full border border-amber-400/30 flex items-center gap-1">
+                <span>🌾</span> Animal Feed Grade
+              </div>
+              <div class="absolute bottom-3 left-3 right-3">
+                <span class="text-[10px] text-amber-300 font-semibold tracking-wider uppercase block">Mozambique Origin • HS 2302.30.00</span>
+                <h3 class="text-lg font-bold text-white leading-tight drop-shadow-md">Wheat Bran (Farelo de Trigo)</h3>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex flex-wrap gap-1.5 mb-3.5">
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Protein Min 15.0%</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Fiber Max 12.0%</span>
+                <span class="text-[11px] font-medium px-2 py-0.5 rounded bg-emerald-50 text-emerald-900 border border-emerald-200"><i class="fa-solid fa-check text-[10px] text-emerald-600 mr-1"></i>Non-GMO</span>
+              </div>
+              <p class="text-xs text-slate-600 line-clamp-2 mb-4 leading-relaxed">Mozambique premium wheat bran (Farelo de Trigo) with 15% protein and rich metabolic energy for cattle, poultry, and dairy feed milling.</p>
+              <div class="bg-slate-50 rounded-xl p-3 border border-slate-100 mb-4 grid grid-cols-2 gap-2 text-xs">
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Protein</span><span class="font-bold text-emerald-800">15.0% Min</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Moisture</span><span class="font-bold text-slate-800">14.0% Max</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Packing</span><span class="font-semibold text-slate-700 truncate block">50 KG PP / Bulk</span></div>
+                <div><span class="text-slate-400 block text-[10px] uppercase font-bold tracking-wider">Port</span><span class="font-semibold text-amber-700">FOB Nacala</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="px-5 pb-5 pt-0 flex items-center gap-2">
+            <button onclick="openProductModal('wheat-bran')" class="flex-1 py-2.5 px-3 rounded-xl bg-[#071F14] hover:bg-[#0B291B] text-white text-xs font-semibold flex items-center justify-center gap-1.5 transition border border-amber-400/20 hover:border-amber-400/50">
+              <i class="fa-regular fa-file-lines text-amber-400"></i>
+              <span>Export Specs</span>
+            </button>
+            <button onclick="prefillRfqCommodity('Wheat Bran (Farelo de Trigo)')" class="py-2.5 px-3 rounded-xl btn-gold text-xs font-bold flex items-center justify-center gap-1.5">
               <i class="fa-solid fa-paper-plane"></i>
               <span>Quote</span>
             </button>
@@ -1552,6 +1600,7 @@
                   <option value="Pigeon Peas Red (Human Consumption)">Pigeon Peas Red</option>
                   <option value="Kidney Beans Red (Non-GMO)">Kidney Beans Red (Non-GMO)</option>
                   <option value="Kidney Beans White (Non-GMO)">Kidney Beans White (Non-GMO)</option>
+                  <option value="Wheat Bran (Farelo de Trigo - Animal Feed Grade)">Wheat Bran / Farelo de Trigo (Animal Feed Grade)</option>
                 </select>
               </div>
 
@@ -1813,7 +1862,7 @@
           </div>
 
           <p class="text-xs text-slate-400 leading-relaxed">
-            Mozambique-based Agri-export company. Exporting Sesame seed, Peanuts, Macadamia nuts, Raw Cashew Nuts (RCN), Pigeon Peas, and Kidney Beans from Nacala Port to international food processing markets.
+            Mozambique-based Agri-export company. Exporting Sesame seed, Peanuts, Macadamia nuts, Raw Cashew Nuts (RCN), Pigeon Peas, Kidney Beans, and Wheat Bran (Farelo de Trigo) from Nacala Port to international markets.
           </p>
 
           <div class="pt-2">
@@ -1836,6 +1885,7 @@
             <li><a href="#products" class="hover:text-amber-300 transition">Pigeon Peas Red</a></li>
             <li><a href="#products" class="hover:text-amber-300 transition">Kidney Beans Red</a></li>
             <li><a href="#products" class="hover:text-amber-300 transition">Kidney Beans White</a></li>
+            <li><a href="#products" class="hover:text-amber-300 transition">Wheat Bran (Farelo)</a></li>
           </ul>
         </div>
 

@@ -390,6 +390,7 @@ let currentSearch = "";
 // Initialize when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   renderProductGrid();
+  initProductCarousel();
   renderComparisonTable();
   initCategoryFilters();
   initSearch();
@@ -417,12 +418,12 @@ function renderProductGrid() {
 
   if (filtered.length === 0) {
     gridContainer.innerHTML = `
-      <div class="col-span-full py-16 text-center">
+      <div class="w-full py-16 text-center">
         <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500/10 text-amber-500 mb-4">
           <i class="fa-solid fa-seedling text-2xl"></i>
         </div>
         <h4 class="text-xl font-bold text-gray-800 mb-2">No Commodities Found</h4>
-        <p class="text-gray-500 max-w-md mx-auto">No agricultural products match "${currentSearch}". Try searching for Sesame, Peanuts, Macadamia, Cashew, Pigeon Peas, or Kidney Beans.</p>
+        <p class="text-gray-500 max-w-md mx-auto">No agricultural products match "${currentSearch}". Try searching for Sesame, Peanuts, Macadamia, Cashew, Pigeon Peas, Kidney Beans, or Wheat Bran.</p>
         <button onclick="resetFilters()" class="mt-4 px-5 py-2.5 rounded-lg btn-gold text-sm font-semibold">Reset Search & Filters</button>
       </div>
     `;
@@ -431,7 +432,7 @@ function renderProductGrid() {
 
   gridContainer.innerHTML = filtered.map(product => {
     return `
-      <div class="product-card bg-white rounded-2xl overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-350 border border-slate-200">
+      <div class="product-card bg-white rounded-2xl overflow-hidden flex flex-col justify-between group shadow-sm hover:shadow-xl transition-all duration-350 border border-slate-200 w-[290px] sm:w-[330px] md:w-[350px] lg:w-[360px] flex-shrink-0 snap-start">
         <div>
           <!-- Image Thumbnail with Origin Badge -->
           <div class="product-image-container h-56 bg-slate-900 relative">
@@ -558,6 +559,62 @@ function renderComparisonTable() {
   }).join('');
 }
 
+// Initialize Product Horizontal Scrolling Carousel & Controls
+function initProductCarousel() {
+  const gridContainer = document.getElementById("productGrid");
+  const prevBtn = document.getElementById("prodScrollPrev");
+  const nextBtn = document.getElementById("prodScrollNext");
+
+  if (!gridContainer) return;
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      const card = gridContainer.querySelector(".product-card");
+      const cardWidth = card ? card.offsetWidth + 24 : 360;
+      gridContainer.scrollBy({ left: -cardWidth, behavior: "smooth" });
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      const card = gridContainer.querySelector(".product-card");
+      const cardWidth = card ? card.offsetWidth + 24 : 360;
+      gridContainer.scrollBy({ left: cardWidth, behavior: "smooth" });
+    });
+  }
+
+  // Mouse drag-to-scroll support for Desktop & Laptop users
+  let isDown = false;
+  let startX = 0;
+  let scrollLeftPos = 0;
+
+  gridContainer.addEventListener("mousedown", (e) => {
+    if (e.target.closest("button") || e.target.closest("a") || e.target.closest("input")) return;
+    isDown = true;
+    gridContainer.classList.add("cursor-grabbing");
+    startX = e.pageX - gridContainer.offsetLeft;
+    scrollLeftPos = gridContainer.scrollLeft;
+  });
+
+  gridContainer.addEventListener("mouseleave", () => {
+    isDown = false;
+    gridContainer.classList.remove("cursor-grabbing");
+  });
+
+  gridContainer.addEventListener("mouseup", () => {
+    isDown = false;
+    gridContainer.classList.remove("cursor-grabbing");
+  });
+
+  gridContainer.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - gridContainer.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    gridContainer.scrollLeft = scrollLeftPos - walk;
+  });
+}
+
 // Category filter tabs
 function initCategoryFilters() {
   const filterBtns = document.querySelectorAll("[data-filter]");
@@ -571,6 +628,8 @@ function initCategoryFilters() {
       btn.classList.remove("bg-white", "text-slate-700", "border-slate-200");
       currentCategory = btn.getAttribute("data-filter");
       renderProductGrid();
+      const gridContainer = document.getElementById("productGrid");
+      if (gridContainer) gridContainer.scrollLeft = 0;
     });
   });
 }
@@ -582,6 +641,8 @@ function initSearch() {
   searchInput.addEventListener("input", (e) => {
     currentSearch = e.target.value.trim();
     renderProductGrid();
+    const gridContainer = document.getElementById("productGrid");
+    if (gridContainer) gridContainer.scrollLeft = 0;
   });
 }
 
@@ -601,6 +662,8 @@ function resetFilters() {
     }
   });
   renderProductGrid();
+  const gridContainer = document.getElementById("productGrid");
+  if (gridContainer) gridContainer.scrollLeft = 0;
 }
 
 // Modal View for Detailed Export Specs

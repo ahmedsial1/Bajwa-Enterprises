@@ -300,7 +300,40 @@ body {
   border-color: #D4AF37 !important;
 }
 
-/* Print Styling for Spec Sheets & PDF Exports */
+/* Horizontal Luxury Carousel Scrollbar */
+.scrollbar-luxury {
+  scrollbar-width: thin;
+  scrollbar-color: #D4AF37 #E2E8F0;
+}
+
+.scrollbar-luxury::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scrollbar-luxury::-webkit-scrollbar-track {
+  background: #E2E8F0;
+  border-radius: 9999px;
+  margin: 0 10px;
+}
+
+.scrollbar-luxury::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #F3C644 0%, #D4AF37 50%, #0E3D27 100%);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.scrollbar-luxury::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #F3C644 0%, #D4AF37 100%);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 @media print {
   body * {
     visibility: hidden;

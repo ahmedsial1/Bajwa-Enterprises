@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Main Homepage -->
+  <url>
+    <loc>https://www.bajwaenterprices.com/</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    
+    <!-- International Language Alternatives -->
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.bajwaenterprices.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.bajwaenterprices.com/" />
+    <xhtml:link rel="alternate" hreflang="pt" href="https://www.bajwaenterprices.com/" />
+
+    <!-- Official Brand Logo -->
+    <image:image>
+      <image:loc>https://www.bajwaenterprices.com/assets/branding/official-logo.png</image:loc>
+      <image:title>Bajwa Enterprices LDA Official Crest Logo</image:title>
+      <image:caption>Bajwa Enterprices LDA - Mozambique Agricultural Products Exporter</image:caption>
+      <image:geo_location>Nampula, Mozambique</image:geo_location>
+    </image:image>
+
+    <!-- 1. Sesame Seed -->
+    <image:image>
+      <image:loc>https://www.bajwaenterprices.com/assets/products/sesame-seed.jpg</image:loc>
+      <image:title>Mozambique Sesame Seed 2026 New Crop</image:title>
+      <image:caption>Natural and Machine Cleaned Non-GMO Sesame Seeds with 99% Purity and 50% Oil Content for Export</image:caption>
+      <image:geo_location>Nampula, Mozambique</image:geo_location>
+    </image:image>
+
+    <!-- 2. Peanuts / Groundnuts -->
+    <image:image>
+      <image:loc>https://www.bajwaenterprices.com/assets/products/peanuts-red-skin.jpg</image:loc>
+      <image:title>Mozambique Peanuts Groundnuts Red Skin</image:title>
+      <image:caption>Bold Red Skin Peanut Kernels Export Quality Counts 40/50 and 50/60</image:caption>
+      <image:geo_location>Mozambique</image:geo_location>
+    </image:image>
+
+    <!-- 3. Macadamia Nuts -->
+    <image:image>
+      <image:loc>https://www.bajwaenterprices.com/assets/products/macadamia-nuts.jpg</image:loc>
+      <image:title>Mozambique Macadamia Nuts Style 0 and Style 1</image:title>
+      <image:caption>Premium Grade Macadamia Kernels Vacuum-Packed for Global Confectionery and Snacking Trade</image:caption>
+      <image:geo_location>Mozambique</image:geo_location>
+    </image:image>
+
+    <!-- 4. Raw Cashew Nuts (RCN) -->
+    <image:image>
+      <image:loc>https://www.bajwaenterprices.com/assets/products/raw-cashew-nuts.jpg</image:loc>
+      <image:title>Mozambique Raw Cashew Nuts RCN in Shell</image:title>
+      <image:caption>Raw Cashew Nuts Out-Turn KOR 48-50 lbs Nut Count 180-200 Exported in 80kg Jute Bags</image:caption>
+      <image:geo_location>Nacala, Mozambique</image:geo_location>
+    </image:image>
+
+    <!-- 5. Pigeon Peas White -->
+    <image:image>
+      <image:loc>https://www.bajwaenterprices.com/assets/products/pigeon-peas-white-v3.jpg</image:loc>
+      <image:title>Mozambique White Pigeon Peas Tur Dal</image:title>
+      <image:caption>Machine Cleaned White Cream Pigeon Peas 98% Purity for International Dal Milling</image:caption>
+      <image:geo_location>Mozambique</image:geo_location>
+    </image:image>
+
+    <!-- 6. Pigeon Peas Red -->
+    <image:image>
+      <image:loc>https://www.bajwaenterprices.com/assets/products/pigeon-peas-red-v3.jpg</image:loc>
+      <image:title>Mozambique Red Pigeon Peas African Red Tur</image:title>
+      <image:caption>Export Quality Red Brown Pigeon Peas Sound Grains Machine Cleaned</image:caption>
+      <image:geo_location>Mozambique</image:geo_location>
+    </image:image>
+
+    <!-- 7. Kidney Beans Red -->
+    <image:image>
+      <image:loc>https://www.bajwaenterprices.com/assets/products/kidney-beans-red-v3.jpg</image:loc>
+      <image:title>Mozambique Dark Red Kidney Beans</image:title>
+      <image:caption>Dark Red Kidney Beans Non-GMO Grade Count 160-180 50kg PP Bags</image:caption>
+      <image:geo_location>Mozambique</image:geo_location>
+    </image:image>
+
+    <!-- 8. Kidney Beans White -->
+    <image:image>
+      <image:loc>https://www.bajwaenterprices.com/assets/products/kidney-beans-white-v3.jpg</image:loc>
+      <image:title>Mozambique White Kidney Beans Cannellini</image:title>
+      <image:caption>Pearl White Cannellini Kidney Beans for Canning Packaging and Wholesale Trade</image:caption>
+      <image:geo_location>Mozambique</image:geo_location>
+    </image:image>
+
+    <!-- 9. Wheat Bran (Farelo de Trigo) -->
+    <image:image>
+      <image:loc>https://www.bajwaenterprices.com/assets/products/wheat-bran.jpg</image:loc>
+      <image:title>Mozambique Wheat Bran Farelo de Trigo Animal Feed Grade</image:title>
+      <image:caption>Premium Wheat Bran 15% Protein Animal Feed Flakes for Cattle Poultry and Dairy Feed Mills</image:caption>
+      <image:geo_location>Nacala Port, Mozambique</image:geo_location>
+    </image:image>
+
+    <!-- Logistics and Nacala Port -->
+    <image:image>
+      <image:loc>https://www.bajwaenterprices.com/assets/logistics/nacala-port.jpg</image:loc>
+      <image:title>Nacala Port Mozambique Deepwater Export Terminal</image:title>
+      <image:caption>Deepwater container and bulk vessel terminal at Nacala Port Mozambique for global agricultural shipments</image:caption>
+      <image:geo_location>Nacala, Mozambique</image:geo_location>
+    </image:image>
+
+    <!-- SGS Inspection and Quality -->
+    <image:image>
+      <image:loc>https://www.bajwaenterprices.com/assets/quality/sgs-inspection.jpg</image:loc>
+      <image:title>SGS and Bureau Veritas Quality Inspection at Nacala</image:title>
+      <image:caption>Pre-shipment quality moisture purity and phytosanitary certification by SGS Mozambique</image:caption>
+      <image:geo_location>Mozambique</image:geo_location>
+    </image:image>
+  </url>
+
+  <!-- Deep Link: Agricultural Products Section -->
+  <url>
+    <loc>https://www.bajwaenterprices.com/#products</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Deep Link: About Bajwa Enterprices -->
+  <url>
+    <loc>https://www.bajwaenterprices.com/#about</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Deep Link: Product Matrix and Comparison -->
+  <url>
+    <loc>https://www.bajwaenterprices.com/#comparison</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Deep Link: Quality and SGS Compliance -->
+  <url>
+    <loc>https://www.bajwaenterprices.com/#quality</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Deep Link: Packing and Nacala Port Logistics -->
+  <url>
+    <loc>https://www.bajwaenterprices.com/#logistics</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Deep Link: Why Bajwa Enterprices -->
+  <url>
+    <loc>https://www.bajwaenterprices.com/#why-us</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Deep Link: Request For Quote (RFQ) Form -->
+  <url>
+    <loc>https://www.bajwaenterprices.com/#rfq-section</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

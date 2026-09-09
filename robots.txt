@@ -1,0 +1,41 @@
+# ==============================================================================
+# Robots.txt for BAJWA ENTERPRICES LDA (www.bajwaenterprices.com)
+# Mozambique Agricultural Products Exporter - Worldwide SEO Approved
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /assets/branding/
+Allow: /assets/products/
+Allow: /assets/logistics/
+Allow: /assets/quality/
+Disallow: /api/
+Disallow: /scratch/
+Disallow: /.system_generated/
+
+# Specific Bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /assets/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap Location
+Sitemap: https://www.bajwaenterprices.com/sitemap.xml
+Host: https://www.bajwaenterprices.com

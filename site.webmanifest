@@ -1,0 +1,21 @@
+{
+  "name": "Bajwa Enterprices LDA",
+  "short_name": "Bajwa Enterprices",
+  "description": "Premier Mozambique Agricultural Commodity Exporter - Sesame, Cashews, Macadamia, Pulses & Wheat Bran",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#071F14",
+  "theme_color": "#071F14",
+  "icons": [
+    {
+      "src": "/assets/branding/official-logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/branding/official-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
